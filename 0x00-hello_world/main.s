@@ -1,4 +1,4 @@
-	.file	"main.c"
+	earfile	"main.c"
 	.text
 	.globl	main
 	.type	main, @function
