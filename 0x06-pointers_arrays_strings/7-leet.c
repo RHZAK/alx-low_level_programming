@@ -1,23 +1,29 @@
 #include "main.h"
+#include <stdio.h>
 /**
-  * leet - function that encode a string
-  *@str:string that will be encoded
-  *Return:returns encoded string
-  */
-
-char *leet(char *str)
+   * leet - change vowels to numbers.
+    * @s: analized string.
+     *
+      * Return: String with all vowels changed.
+       */
+char *leet(char *s)
 {
-		int index1 = 0, index2;
-			char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
+		char a[] = "aeotlAEOTL";
+			char n[] = "4307143071";
+				int i = 0;
+					int j;
 
-				while (str[++index1])
-						{
-									for (index2 = 0; index2 <= 7; index2++)
-												{
-																if (str[index1] == leet[index2] ||
-																					 str[index1] - 32 == leet[index2])
-																					str[index1] = index2 + '0';
-																		}
-										}
-					return (str);
+						while (*(s + i) != '\0')
+								{
+											for (j = 0; j <= 9; j++)
+														{
+																		if (*(s + i) == a[j])
+																						{
+																											*(s + i) = n[j];
+																														}
+																				}
+													i++;
+														}
+							return (s);
 }
+
